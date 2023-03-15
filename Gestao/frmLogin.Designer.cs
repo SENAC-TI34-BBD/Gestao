@@ -85,7 +85,6 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(168, 22);
             this.txtSenha.TabIndex = 4;
-            this.txtSenha.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // btnLogin
             // 

@@ -30,7 +30,7 @@ namespace Gestao
             throw new Exception("X.X.X.X");
         }
 
-               string hostName = System.Net.Dns.GetHostName();
+        string hostName = System.Net.Dns.GetHostName();
 
 
         public frmHome()
@@ -60,39 +60,12 @@ namespace Gestao
         }
 
 
-        private void produtosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void movimentaçõesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            closeChildForm();
-            Form frm = new frmCadCliente();
-            showFrm(frm);
-        }
 
-        private void inkAddCliente_Click(object sender, EventArgs e)
-        {
-            closeChildForm();
-            Form frm = new frmCadCliente();
-            showFrm(frm);
-        }
         public void verificaLogin()
         {
             Boolean bolLogado = false;
@@ -100,6 +73,57 @@ namespace Gestao
             {
                 Form login = new frmLogin();
                 showFrm(login);
+            }
+        }
+
+        private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            closeChildForm();
+            Form frm = new frmCadCliente();
+            frm.MdiParent = this;
+            showFrm(frm);
+
+        }
+
+        private void cascataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void verticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+            {
+                foreach (Control control in this.Controls)
+                {
+                    if (control is MdiClient)
+                    {
+                        control.BackColor = System.Drawing.ColorTranslator.FromHtml("#80ACFF"); ;
+                        break;
+                    }
+                }
+                IsMdiContainer = true;
+                var sideBar = new Form();
+                sideBar.Text = "SideBar";
+                sideBar.TopLevel = false;
+                sideBar.FormBorderStyle = FormBorderStyle.None;
+                sideBar.Dock = DockStyle.Right;
+                sideBar.MaximizeBox = false;
+                    
+                this.Controls.Add(sideBar);
+
+
+                sideBar.Show();
+
             }
         }
     }

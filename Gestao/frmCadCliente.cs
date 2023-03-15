@@ -17,5 +17,9 @@ namespace Gestao
             InitializeComponent();
         }
 
+        private void dadosContato_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

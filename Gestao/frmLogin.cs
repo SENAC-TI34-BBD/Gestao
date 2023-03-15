@@ -14,6 +14,7 @@ namespace Gestao
     {
         public frmLogin()
         {
+
             InitializeComponent();
         }
 
@@ -27,9 +28,6 @@ namespace Gestao
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }
