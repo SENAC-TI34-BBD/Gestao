@@ -78,7 +78,6 @@ namespace Gestao
 
         private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            closeChildForm();
             Form frm = new frmCadCliente();
             frm.MdiParent = this;
             showFrm(frm);
@@ -125,6 +124,13 @@ namespace Gestao
                 sideBar.Show();
 
             }
+        }
+
+        private void cadastrarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmCadFornecedor();
+            frm.MdiParent = this;
+            showFrm(frm);
         }
     }
 }

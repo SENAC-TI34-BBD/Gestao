@@ -30,6 +30,14 @@
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.lblDataAttTexto = new System.Windows.Forms.ToolStripLabel();
+            this.lblDataValor = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblDataCriadoTexto = new System.Windows.Forms.ToolStripLabel();
+            this.lblDataCriadoValor = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblUsuValor = new System.Windows.Forms.ToolStripLabel();
+            this.lblUsuTexto = new System.Windows.Forms.ToolStripLabel();
             this.guiasCadCli = new System.Windows.Forms.TabControl();
             this.tabDadosCliente = new System.Windows.Forms.TabPage();
             this.grpVazio3 = new System.Windows.Forms.GroupBox();
@@ -73,7 +81,6 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.tabDadosCobranca = new System.Windows.Forms.TabPage();
-            this.tabOutros = new System.Windows.Forms.TabPage();
             this.grpVazioCob = new System.Windows.Forms.GroupBox();
             this.lblUFCob = new System.Windows.Forms.Label();
             this.cmbUFCob = new System.Windows.Forms.ComboBox();
@@ -90,14 +97,7 @@
             this.txtCEPCob = new System.Windows.Forms.MaskedTextBox();
             this.btnCEPCob = new System.Windows.Forms.Button();
             this.lblCEPCob = new System.Windows.Forms.Label();
-            this.lblDataAttTexto = new System.Windows.Forms.ToolStripLabel();
-            this.lblDataValor = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblDataCriadoTexto = new System.Windows.Forms.ToolStripLabel();
-            this.lblDataCriadoValor = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblUsuTexto = new System.Windows.Forms.ToolStripLabel();
-            this.lblUsuValor = new System.Windows.Forms.ToolStripLabel();
+            this.tabOutros = new System.Windows.Forms.TabPage();
             this.grpDetalhesOutros = new System.Windows.Forms.GroupBox();
             this.txtObsCliente = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
@@ -108,8 +108,8 @@
             this.grpVazio2.SuspendLayout();
             this.grpVazio.SuspendLayout();
             this.tabDadosCobranca.SuspendLayout();
-            this.tabOutros.SuspendLayout();
             this.grpVazioCob.SuspendLayout();
+            this.tabOutros.SuspendLayout();
             this.grpDetalhesOutros.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,6 +133,54 @@
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "barraFerramentas";
             // 
+            // lblDataAttTexto
+            // 
+            this.lblDataAttTexto.Name = "lblDataAttTexto";
+            this.lblDataAttTexto.Size = new System.Drawing.Size(66, 22);
+            this.lblDataAttTexto.Text = "Atualizado:";
+            // 
+            // lblDataValor
+            // 
+            this.lblDataValor.Name = "lblDataValor";
+            this.lblDataValor.Size = new System.Drawing.Size(65, 22);
+            this.lblDataValor.Text = "01/01/1900";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // lblDataCriadoTexto
+            // 
+            this.lblDataCriadoTexto.Name = "lblDataCriadoTexto";
+            this.lblDataCriadoTexto.Size = new System.Drawing.Size(65, 22);
+            this.lblDataCriadoTexto.Text = "Criado em:";
+            // 
+            // lblDataCriadoValor
+            // 
+            this.lblDataCriadoValor.Name = "lblDataCriadoValor";
+            this.lblDataCriadoValor.Size = new System.Drawing.Size(65, 22);
+            this.lblDataCriadoValor.Text = "01/01/1900";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // lblUsuValor
+            // 
+            this.lblUsuValor.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.lblUsuValor.Name = "lblUsuValor";
+            this.lblUsuValor.Size = new System.Drawing.Size(100, 22);
+            this.lblUsuValor.Text = "ADMINISTRADOR";
+            // 
+            // lblUsuTexto
+            // 
+            this.lblUsuTexto.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.lblUsuTexto.Name = "lblUsuTexto";
+            this.lblUsuTexto.Size = new System.Drawing.Size(50, 22);
+            this.lblUsuTexto.Text = "Usuário:";
+            // 
             // guiasCadCli
             // 
             this.guiasCadCli.Controls.Add(this.tabDadosCliente);
@@ -148,11 +196,10 @@
             // tabDadosCliente
             // 
             this.tabDadosCliente.BackColor = System.Drawing.SystemColors.Control;
-            this.tabDadosCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabDadosCliente.Controls.Add(this.grpVazio3);
             this.tabDadosCliente.Controls.Add(this.grpVazio2);
             this.tabDadosCliente.Controls.Add(this.grpVazio);
-            this.tabDadosCliente.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tabDadosCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabDadosCliente.Location = new System.Drawing.Point(4, 24);
             this.tabDadosCliente.Name = "tabDadosCliente";
             this.tabDadosCliente.Padding = new System.Windows.Forms.Padding(3);
@@ -633,7 +680,6 @@
             // tabDadosCobranca
             // 
             this.tabDadosCobranca.BackColor = System.Drawing.SystemColors.Control;
-            this.tabDadosCobranca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabDadosCobranca.Controls.Add(this.grpVazioCob);
             this.tabDadosCobranca.Location = new System.Drawing.Point(4, 24);
             this.tabDadosCobranca.Name = "tabDadosCobranca";
@@ -641,16 +687,6 @@
             this.tabDadosCobranca.Size = new System.Drawing.Size(708, 460);
             this.tabDadosCobranca.TabIndex = 1;
             this.tabDadosCobranca.Text = "Dados Cobrança";
-            // 
-            // tabOutros
-            // 
-            this.tabOutros.BackColor = System.Drawing.SystemColors.Control;
-            this.tabOutros.Controls.Add(this.grpDetalhesOutros);
-            this.tabOutros.Location = new System.Drawing.Point(4, 24);
-            this.tabOutros.Name = "tabOutros";
-            this.tabOutros.Size = new System.Drawing.Size(708, 460);
-            this.tabOutros.TabIndex = 2;
-            this.tabOutros.Text = "Outras Informações";
             // 
             // grpVazioCob
             // 
@@ -850,53 +886,15 @@
             this.lblCEPCob.TabIndex = 15;
             this.lblCEPCob.Text = "CEP";
             // 
-            // lblDataAttTexto
+            // tabOutros
             // 
-            this.lblDataAttTexto.Name = "lblDataAttTexto";
-            this.lblDataAttTexto.Size = new System.Drawing.Size(66, 22);
-            this.lblDataAttTexto.Text = "Atualizado:";
-            // 
-            // lblDataValor
-            // 
-            this.lblDataValor.Name = "lblDataValor";
-            this.lblDataValor.Size = new System.Drawing.Size(65, 22);
-            this.lblDataValor.Text = "01/01/1900";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // lblDataCriadoTexto
-            // 
-            this.lblDataCriadoTexto.Name = "lblDataCriadoTexto";
-            this.lblDataCriadoTexto.Size = new System.Drawing.Size(65, 22);
-            this.lblDataCriadoTexto.Text = "Criado em:";
-            // 
-            // lblDataCriadoValor
-            // 
-            this.lblDataCriadoValor.Name = "lblDataCriadoValor";
-            this.lblDataCriadoValor.Size = new System.Drawing.Size(65, 22);
-            this.lblDataCriadoValor.Text = "01/01/1900";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // lblUsuTexto
-            // 
-            this.lblUsuTexto.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.lblUsuTexto.Name = "lblUsuTexto";
-            this.lblUsuTexto.Size = new System.Drawing.Size(50, 22);
-            this.lblUsuTexto.Text = "Usuário:";
-            // 
-            // lblUsuValor
-            // 
-            this.lblUsuValor.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.lblUsuValor.Name = "lblUsuValor";
-            this.lblUsuValor.Size = new System.Drawing.Size(100, 22);
-            this.lblUsuValor.Text = "ADMINISTRADOR";
+            this.tabOutros.BackColor = System.Drawing.SystemColors.Control;
+            this.tabOutros.Controls.Add(this.grpDetalhesOutros);
+            this.tabOutros.Location = new System.Drawing.Point(4, 24);
+            this.tabOutros.Name = "tabOutros";
+            this.tabOutros.Size = new System.Drawing.Size(708, 460);
+            this.tabOutros.TabIndex = 2;
+            this.tabOutros.Text = "Outras Informações";
             // 
             // grpDetalhesOutros
             // 
@@ -944,9 +942,9 @@
             this.grpVazio.ResumeLayout(false);
             this.grpVazio.PerformLayout();
             this.tabDadosCobranca.ResumeLayout(false);
-            this.tabOutros.ResumeLayout(false);
             this.grpVazioCob.ResumeLayout(false);
             this.grpVazioCob.PerformLayout();
+            this.tabOutros.ResumeLayout(false);
             this.grpDetalhesOutros.ResumeLayout(false);
             this.grpDetalhesOutros.PerformLayout();
             this.ResumeLayout(false);
