@@ -121,14 +121,23 @@
   <data name="iconSave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconSave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconAdd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconAddCliente1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconAddCliente1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconAddCliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconAddCliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="iconAddProduto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconAddProduto1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgClear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgClear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconPrint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconPrint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconAddCliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconAddCliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diskette" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diskette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,10 +148,13 @@
   <data name="iconAddProduto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconAddProduto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconAdd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imgDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgDelete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconPrint" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconPrint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imgUnlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgUnlock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgImprimir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgImprimir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
