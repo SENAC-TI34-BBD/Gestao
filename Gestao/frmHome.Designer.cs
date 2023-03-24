@@ -33,6 +33,7 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarFornecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciadorDeCadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +57,8 @@
             this.duplicatasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cNABToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contasAReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.provisãoDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarContasAPagarAPartirDaNotaFiscalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarContasAReceberAPartirDaNotaFiscalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fiscalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,10 +86,17 @@
             this.divider2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblVersao = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolBarraAcesso = new System.Windows.Forms.ToolStrip();
-            this.cadastroToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.provisãoDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsFiliais = new System.Windows.Forms.ToolStripComboBox();
+            this.btnUnlockSave = new System.Windows.Forms.ToolStripButton();
+            this.btnLimpar = new System.Windows.Forms.ToolStripButton();
+            this.btnExcluir = new System.Windows.Forms.ToolStripButton();
+            this.btnImprimir = new System.Windows.Forms.ToolStripButton();
             this.mnMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.toolBarraAcesso.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnMenu
@@ -131,15 +141,24 @@
             // cadastrarClienteToolStripMenuItem
             // 
             this.cadastrarClienteToolStripMenuItem.Name = "cadastrarClienteToolStripMenuItem";
-            this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.cadastrarClienteToolStripMenuItem.Text = "Cadastrar Cliente";
             this.cadastrarClienteToolStripMenuItem.Click += new System.EventHandler(this.cadastrarClienteToolStripMenuItem_Click);
             // 
             // fornecedoresToolStripMenuItem
             // 
+            this.fornecedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarFornecedorToolStripMenuItem});
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
             this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
+            // 
+            // cadastrarFornecedorToolStripMenuItem
+            // 
+            this.cadastrarFornecedorToolStripMenuItem.Name = "cadastrarFornecedorToolStripMenuItem";
+            this.cadastrarFornecedorToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.cadastrarFornecedorToolStripMenuItem.Text = "Cadastrar Fornecedor";
+            this.cadastrarFornecedorToolStripMenuItem.Click += new System.EventHandler(this.cadastrarFornecedorToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem
             // 
@@ -184,7 +203,7 @@
             this.vinculoDeProdutosComFornecedorToolStripMenuItem,
             this.manutençãoDoEstoqueToolStripMenuItem});
             this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
-            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.produtosToolStripMenuItem1.Text = "Manutenção";
             // 
             // produtosToolStripMenuItem3
@@ -212,7 +231,7 @@
             this.saidasToolStripMenuItem,
             this.extratoDeMovimentaçãoDeProdutosToolStripMenuItem});
             this.produtosToolStripMenuItem2.Name = "produtosToolStripMenuItem2";
-            this.produtosToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem2.Size = new System.Drawing.Size(141, 22);
             this.produtosToolStripMenuItem2.Text = "Produtos";
             // 
             // entradasToolStripMenuItem
@@ -240,7 +259,7 @@
             this.ajusteManualDeProdutosNoEstoqueToolStripMenuItem,
             this.importagemContagemToolStripMenuItem});
             this.movimentaçõesToolStripMenuItem.Name = "movimentaçõesToolStripMenuItem";
-            this.movimentaçõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.movimentaçõesToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.movimentaçõesToolStripMenuItem.Text = "Balanço";
             // 
             // contagemDeEstoqueToolStripMenuItem
@@ -285,19 +304,19 @@
             // cadastroToolStripMenuItem1
             // 
             this.cadastroToolStripMenuItem1.Name = "cadastroToolStripMenuItem1";
-            this.cadastroToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.cadastroToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
             this.cadastroToolStripMenuItem1.Text = "Cadastro";
             // 
             // duplicatasToolStripMenuItem
             // 
             this.duplicatasToolStripMenuItem.Name = "duplicatasToolStripMenuItem";
-            this.duplicatasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.duplicatasToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.duplicatasToolStripMenuItem.Text = "Duplicatas";
             // 
             // cNABToolStripMenuItem
             // 
             this.cNABToolStripMenuItem.Name = "cNABToolStripMenuItem";
-            this.cNABToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cNABToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.cNABToolStripMenuItem.Text = "CNAB";
             // 
             // contasAReceberToolStripMenuItem
@@ -308,6 +327,18 @@
             this.contasAReceberToolStripMenuItem.Name = "contasAReceberToolStripMenuItem";
             this.contasAReceberToolStripMenuItem.Size = new System.Drawing.Size(308, 22);
             this.contasAReceberToolStripMenuItem.Text = "Contas a receber";
+            // 
+            // cadastroToolStripMenuItem2
+            // 
+            this.cadastroToolStripMenuItem2.Name = "cadastroToolStripMenuItem2";
+            this.cadastroToolStripMenuItem2.Size = new System.Drawing.Size(199, 22);
+            this.cadastroToolStripMenuItem2.Text = "Cadastro";
+            // 
+            // provisãoDePagamentoToolStripMenuItem
+            // 
+            this.provisãoDePagamentoToolStripMenuItem.Name = "provisãoDePagamentoToolStripMenuItem";
+            this.provisãoDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.provisãoDePagamentoToolStripMenuItem.Text = "Provisão de pagamento";
             // 
             // gerarContasAPagarAPartirDaNotaFiscalToolStripMenuItem
             // 
@@ -335,7 +366,7 @@
             this.nFEToolStripMenuItem,
             this.nFCeToolStripMenuItem});
             this.notaFiscalToolStripMenuItem.Name = "notaFiscalToolStripMenuItem";
-            this.notaFiscalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.notaFiscalToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.notaFiscalToolStripMenuItem.Text = "Nota Fiscal";
             // 
             // nFEToolStripMenuItem
@@ -493,23 +524,80 @@
             // 
             // toolBarraAcesso
             // 
+            this.toolBarraAcesso.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.toolBarraAcesso.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnUnlockSave,
+            this.toolStripSeparator,
+            this.btnLimpar,
+            this.toolStripSeparator2,
+            this.btnExcluir,
+            this.toolStripSeparator3,
+            this.btnImprimir,
+            this.tsFiliais});
             this.toolBarraAcesso.Location = new System.Drawing.Point(0, 24);
             this.toolBarraAcesso.Name = "toolBarraAcesso";
             this.toolBarraAcesso.Size = new System.Drawing.Size(1159, 25);
+            this.toolBarraAcesso.Stretch = true;
             this.toolBarraAcesso.TabIndex = 1;
-            this.toolBarraAcesso.Text = "toolStrip1";
+            this.toolBarraAcesso.Text = "barraFerramentas";
+            this.toolBarraAcesso.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolBarraAcesso_ItemClicked);
             // 
-            // cadastroToolStripMenuItem2
+            // toolStripSeparator
             // 
-            this.cadastroToolStripMenuItem2.Name = "cadastroToolStripMenuItem2";
-            this.cadastroToolStripMenuItem2.Size = new System.Drawing.Size(199, 22);
-            this.cadastroToolStripMenuItem2.Text = "Cadastro";
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
             // 
-            // provisãoDePagamentoToolStripMenuItem
+            // toolStripSeparator2
             // 
-            this.provisãoDePagamentoToolStripMenuItem.Name = "provisãoDePagamentoToolStripMenuItem";
-            this.provisãoDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.provisãoDePagamentoToolStripMenuItem.Text = "Provisão de pagamento";
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsFiliais
+            // 
+            this.tsFiliais.Name = "tsFiliais";
+            this.tsFiliais.Size = new System.Drawing.Size(121, 25);
+            // 
+            // btnUnlockSave
+            // 
+            this.btnUnlockSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnUnlockSave.Image = global::Gestao.Properties.Resources.imgUnlock;
+            this.btnUnlockSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUnlockSave.Name = "btnUnlockSave";
+            this.btnUnlockSave.Size = new System.Drawing.Size(23, 22);
+            this.btnUnlockSave.Text = "Desbloquear / Salvar";
+            this.btnUnlockSave.Click += new System.EventHandler(this.btnUnlockSave_Click);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLimpar.Image = global::Gestao.Properties.Resources.imgClear;
+            this.btnLimpar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(23, 22);
+            this.btnLimpar.Text = "Limpar tela";
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnExcluir.Image = global::Gestao.Properties.Resources.imgDelete;
+            this.btnExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(23, 22);
+            this.btnExcluir.Text = "Excluir Cadastro";
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnImprimir.Image = global::Gestao.Properties.Resources.imgImprimir;
+            this.btnImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(23, 22);
+            this.btnImprimir.Text = "Imprimir";
             // 
             // frmHome
             // 
@@ -531,6 +619,8 @@
             this.mnMenu.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.toolBarraAcesso.ResumeLayout(false);
+            this.toolBarraAcesso.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -595,6 +685,15 @@
         private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem provisãoDePagamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarFornecedorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton btnUnlockSave;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.ToolStripButton btnLimpar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton btnExcluir;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton btnImprimir;
+        private System.Windows.Forms.ToolStripComboBox tsFiliais;
     }
 }
 

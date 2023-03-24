@@ -11,12 +11,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace Gestao
 {
 
     public partial class frmHome : Form
     {
+        internal frmCadCliente frmCadCliente = null;
+
         public static string GetLocalIPAddress()
         {
             var host = Dns.GetHostEntry(Dns.GetHostName());
@@ -78,7 +81,6 @@ namespace Gestao
 
         private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            closeChildForm();
             Form frm = new frmCadCliente();
             frm.MdiParent = this;
             showFrm(frm);
@@ -111,6 +113,9 @@ namespace Gestao
                         break;
                     }
                 }
+                btnExcluir.Enabled = false;
+                btnImprimir.Enabled = false;
+                btnLimpar.Enabled = false;
                 IsMdiContainer = true;
                 var sideBar = new Form();
                 sideBar.Text = "SideBar";
@@ -124,6 +129,30 @@ namespace Gestao
 
                 sideBar.Show();
 
+            }
+        }
+
+        private void cadastrarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmCadFornecedor();
+            frm.MdiParent = this;
+            showFrm(frm);
+        }
+
+        private void toolBarraAcesso_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void btnUnlockSave_Click(object sender, EventArgs e)
+        {
+           if(Application.OpenForms.OfType<frmCadCliente>().Count() == 1 )
+            {
+                this.frmCadCliente.unlockForm();
+            }
+            else
+            {
+                MessageBox.Show("FECHADO");
             }
         }
     }

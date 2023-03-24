@@ -21,5 +21,28 @@ namespace Gestao
         {
 
         }
+
+        private void frmCadCliente_Load(object sender, EventArgs e)
+        {
+            lockForm();
+        }
+
+        public void lockForm()
+        {
+                grpVazio.Enabled = false;
+                grpVazio2.Enabled = false;
+                grpVazio3.Enabled = false;
+                grpVazioCob.Enabled = false;
+                grpDetalhesOutros.Enabled = false;
+
+        }
+        public void unlockForm()
+        {
+            grpVazio.Enabled = true;
+            grpVazio2.Enabled = true;
+            grpVazio3.Enabled = true;
+            grpVazioCob.Enabled = true;
+            grpDetalhesOutros.Enabled = true;
+        }
     }
 }
